@@ -1,11 +1,12 @@
 import { createGlobalStyle } from "styled-components";
+import { colors } from "./constants/colors";
 
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background: #F8F8F8;
-    font-family: Open-Sans, Helvetica, Sans-Serif;
+    background: ${colors.primary};
+    font-family: 'Montserrat', sans-serif;
   }
 
   *{

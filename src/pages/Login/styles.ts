@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../constants/colors";
 
 export const Container = styled.div`
   display: grid;
@@ -7,7 +8,12 @@ export const Container = styled.div`
 `;
 
 export const BannerContainer = styled.div`
-  background-color: #835afd;
+  background: rgb(239, 4, 145);
+  background: linear-gradient(
+    191deg,
+    rgba(239, 4, 145, 1) 0%,
+    rgba(239, 4, 145, 0.2721463585434174) 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,13 +21,15 @@ export const BannerContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 36px;
+  font-size: 30px;
   color: #fff;
+  margin-bottom: 10px;
 `;
 
 export const SubTitle = styled.p`
-  font-size: 24px;
+  font-size: 18px;
   color: #f8f8f8;
+  margin-bottom: 10px;
 `;
 
 export const LoginContainer = styled.div`
@@ -39,28 +47,24 @@ export const Input = styled.input`
   margin-bottom: 20px;
   outline: none;
   padding: 0px 10px;
+  transition: 0.2s ease;
+  &:focus {
+    border: 1px solid ${colors.linearStart};
+  }
 `;
 
 export const EnterButton = styled.button`
   height: 50px;
   width: 340px;
-  background-color: #835afd;
+  background-color: ${colors.linearStart};
   color: #fff;
   border-radius: 8px;
   outline: none;
   border: none;
-`;
-
-export const GoogleButton = styled.button`
-  height: 50px;
-  width: 340px;
-  background-color: #ea4335;
-  color: #fff;
-  border-radius: 8px;
-  outline: none;
-  border: none;
-  margin-bottom: 32px;
-  margin-top: 56px;
+  transition: 0.2s ease;
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 export const WrapperLines = styled.div`
@@ -70,7 +74,8 @@ export const WrapperLines = styled.div`
 
 export const Line = styled.hr`
   width: 76px;
-  height: 3px;
+  height: 1px;
+  background-color: #a8a8b3;
 `;
 
 export const Text = styled.p`
